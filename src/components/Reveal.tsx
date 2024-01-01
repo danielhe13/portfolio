@@ -18,6 +18,7 @@ export default function Reveal({ children, width = "fit-content" }: Props) {
       mainControls.start("visible");
       slideControls.start("visible");
     }
+  // eslint-disable-next-line
   }, [isInView])
 
   return (
