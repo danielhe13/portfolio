@@ -10,7 +10,6 @@ function App() {
       <Routes>
         <Route path='/*' element={<LandingPage />}/>
       </Routes>
-      <LandingPage />
     </Router>
   );
 }
