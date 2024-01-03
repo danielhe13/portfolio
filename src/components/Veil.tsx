@@ -53,7 +53,7 @@ export default function Veil({ children, width = "fit-content", screen }: Props)
         style={{
           position: "absolute",
           top: 4,
-          bottom: 4,
+          bottom: 0,
           left: 0,
           right: 0,
           background: "black",
