@@ -1,10 +1,15 @@
 import { Box, Typography } from '@mui/material'
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import Reveal from '../components/Reveal'
 import Typewriter from '../components/Typewriter';
+import Veil from '../components/Veil';
 
-export default function Screen() {
+interface Props {
+  screen: Boolean;
+}
+
+export default function Screen({ screen }: Props) {
 
   return (
     <Box display='flex' flexDirection='column'
@@ -12,14 +17,18 @@ export default function Screen() {
     height='100svh'
     >
       <Box>
-        <Reveal>
-          <Typography variant="h1">
-            Hi, I'm Daniel.
+        <Veil screen={screen}>
+          <Reveal>
+            <Typography variant="h1">
+              Hi, I'm Daniel.
+            </Typography>
+          </Reveal>
+        </Veil>
+        <Veil screen={screen}>
+          <Typography variant="h4">
+            <Typewriter baseText="I'm a Computer Science Student"/>
           </Typography>
-        </Reveal>
-        <Typography variant="h4">
-          <Typewriter baseText="I'm a Computer Science Student"/>
-        </Typography>
+        </Veil>
       </Box>
     </Box>
   )
