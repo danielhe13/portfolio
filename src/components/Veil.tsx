@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 
 interface Props {
   children: JSX.Element;
   width?: "fit-content" | "100%";
   screen: Boolean;
+  setClose: (close: boolean) => void;
 }
 
-export default function Veil({ children, width = "fit-content", screen }: Props) {
-
-  const nagivate = useNavigate();
+export default function Veil({ children, width = "fit-content", screen, setClose }: Props) {
 
   const mainControls = useAnimation();
   const slideControls = useAnimation();
@@ -23,7 +21,9 @@ export default function Veil({ children, width = "fit-content", screen }: Props)
         await mainControls.start("hidden");
         await slideControls.start("wipeout");
         await mainControls.start("gone");
-        nagivate('/home');
+        setTimeout(() => {
+          setClose(true);
+        }, 250);
       }
     }
     startAnimations();

@@ -9,8 +9,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/*" element={<Screen />} />
-        <Route path="/home" element={<LandingPage />} />
+        <Route path="/*" element={<LandingPage />} />
       </Routes>
     </Router>
   );
