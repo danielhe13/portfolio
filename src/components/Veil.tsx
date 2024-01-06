@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   children: JSX.Element;
@@ -8,6 +9,8 @@ interface Props {
 }
 
 export default function Veil({ children, width = "fit-content", screen }: Props) {
+
+  const nagivate = useNavigate();
 
   const mainControls = useAnimation();
   const slideControls = useAnimation();
@@ -20,6 +23,7 @@ export default function Veil({ children, width = "fit-content", screen }: Props)
         await mainControls.start("hidden");
         await slideControls.start("wipeout");
         await mainControls.start("gone");
+        nagivate('/home');
       }
     }
     startAnimations();

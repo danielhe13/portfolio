@@ -1,31 +1,17 @@
-import React, { useEffect } from 'react'
-
-import Screen from './Screen';
+import React from 'react'
+import Header from '../components/Header';
+import Navbar from '../components/Navbar';
+import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {
-
-  const [screen, setScreen] = React.useState(true);
-
-  const enter = () => {
-    setScreen(false);
-  };
-
-  useEffect(() => {
-    let timeoutId: string | number | NodeJS.Timeout | undefined;
-
-    if (screen) {
-      window.addEventListener('click', enter);
-    } else {
-      window.removeEventListener('click', enter);
-    }
-
-    return () => {
-      window.removeEventListener('click', enter);
-      clearTimeout(timeoutId);
-    };
-  }, [screen])
-
   return (
-    <Screen screen={screen}/>
+    <div style={{
+      padding: '32px 32px 42px',
+      display: 'flex',
+      justifyContent: 'center',
+    }}>
+      <Header />
+      <Navbar />
+    </div>
   );
 }

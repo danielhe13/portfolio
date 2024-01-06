@@ -1,20 +1,38 @@
 import { Box, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Reveal from '../components/Reveal'
 import Typewriter from '../components/Typewriter';
 import Veil from '../components/Veil';
 
-interface Props {
-  screen: Boolean;
-}
+export default function Screen() {
+  const [screen, setScreen] = React.useState(true);
 
-export default function Screen({ screen }: Props) {
+  const enter = () => {
+    setScreen(false);
+  };
+
+  useEffect(() => {
+    let timeoutId: string | number | NodeJS.Timeout | undefined;
+
+    if (screen) {
+      window.addEventListener('click', enter);
+    } else {
+      window.removeEventListener('click', enter);
+    }
+
+    return () => {
+      window.removeEventListener('click', enter);
+      clearTimeout(timeoutId);
+    };
+  }, [screen])
 
   return (
     <Box display='flex' flexDirection='column'
     alignItems='center' justifyContent='center'
-    height='100svh'
+    width='100svw'
+    height='100svh' zIndex={100} sx={{ backgroundColor: 'white' }}
+    position='fixed'
     >
       <Box>
         <Veil screen={screen}>
