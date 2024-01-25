@@ -14,7 +14,7 @@ export default function Navbar() {
       maxWidth: '1200px',
       justifyContent: 'space-between',
       border: '1px solid #e5e7eb',
-      backgroundColor: 'white',
+      backgroundColor: 'rgba(255,255,255,0.6)',
       backdropFilter: 'blur(8px)',
       position: 'fixed',
       bottom: '42px',
