@@ -23,11 +23,11 @@ function App() {
       }}>
         <Header />
         <Routes>
-          <Route path="/portfolio/courses" element={<Courses />} />
-          <Route path="/portfolio/experience" element={<Courses />} />
-          <Route path="/portfolio/projects" element={<Courses />} />
-          <Route path="/portfolio" element={<AboutMe />} />
-          <Route path="/portfolio/aboutme" element={<AboutMe />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/experience" element={<Courses />} />
+          <Route path="/projects" element={<Courses />} />
+          <Route path="/" element={<AboutMe />} />
+          <Route path="/aboutme" element={<AboutMe />} />
         </Routes>
         <Navbar />
       </div>

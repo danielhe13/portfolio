@@ -18,10 +18,10 @@ export default function Navbar() {
       bottom: '42px',
       zIndex: 1,
     }}>
-      <NavButtons name='About Me' route="/portfolio/aboutme"/>
-      <NavButtons name='Courses' route="/portfolio/courses"/>
-      <NavButtons name='Experience' route="/portfolio/experience"/>
-      <NavButtons name='Projects' route="/portfolio/projects"/>
+      <NavButtons name='About Me' route="/aboutme"/>
+      <NavButtons name='Courses' route="/courses"/>
+      <NavButtons name='Experience' route="/experience"/>
+      <NavButtons name='Projects' route="/projects"/>
     </div>
   );
 }

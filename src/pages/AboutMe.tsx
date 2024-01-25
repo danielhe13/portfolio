@@ -7,7 +7,7 @@ export default function AboutMe() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate('/portfolio/aboutme');
+    navigate('/aboutme');
   }, [])
 
   return (
