@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface Props {
   name: string;
-  page: string;
-  setPage: (page: string) => void;
+  route: string;
 }
 
-export default function NavButtons({ name, page, setPage }: Props) {
+export default function NavButtons({ name, route }: Props) {
   const [hover, setHover] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <>
@@ -17,19 +19,19 @@ export default function NavButtons({ name, page, setPage }: Props) {
           borderRadius: '15px',
           textTransform: 'none',
           padding: '12px 20px',
-          backgroundColor: page === name ? 'black' : hover ? 'rgba(0, 0, 0, 0.05)' : 'transparent',
+          backgroundColor: location.pathname === route ? 'black' : hover ? 'rgba(0, 0, 0, 0.05)' : 'transparent',
           width: 'fit-content',
           cursor: 'pointer',
           transition: 'background-color 0.3s ease',
         }}
         onClick={() => {
-          setPage(name);
+          navigate(route);
         }}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
         <div style={{
-            color: page === name ? 'white' : 'black',
+            color: location.pathname === route ? 'white' : 'black',
             fontFamily: 'Arial',
             fontSize: '1.625rem',
             fontStyle: 'normal',

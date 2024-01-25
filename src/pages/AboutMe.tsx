@@ -1,8 +1,15 @@
 import { Box, Typography } from '@mui/material';
-import React from 'react'
+import React, { useEffect } from 'react'
 import BlackButton from '../components/BlackButton';
+import { useNavigate } from 'react-router-dom';
 
 export default function AboutMe() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/portfolio/aboutme');
+  }, [])
+
   return (
     <>
       <div

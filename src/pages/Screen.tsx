@@ -39,13 +39,13 @@ export default function Screen() {
         <Veil screen={screen} setClose={setClose}>
           <Reveal>
             <Typography variant="h1">
-              Hi, I'm Daniel.
+              Hi, I’m Daniel.
             </Typography>
           </Reveal>
         </Veil>
         <Veil screen={screen} setClose={setClose}>
           <Typography variant="h4">
-            <Typewriter baseText="I'm a Computer Science Student"/>
+            <Typewriter baseText="I’m a Computer Science Student"/>
           </Typography>
         </Veil>
       </Box>
