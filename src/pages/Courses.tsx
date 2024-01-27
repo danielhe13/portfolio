@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import CourseSmall from '../components/CourseSmall';
 import { motion } from 'framer-motion';
 
@@ -56,7 +56,31 @@ export default function Courses() {
       code: 'COMP3231',
       score: '75 DN',
     },
-  ]
+  ];
+
+  courses.push(...courses);
+
+  const scrollContainerRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const scrollInterval = setInterval(() => {
+      if (scrollContainerRef.current) {
+        if (
+          scrollContainerRef.current.scrollTop >=
+          scrollContainerRef.current.scrollHeight / 2
+        ) {
+          scrollContainerRef.current.scrollTop = 0;
+        } else if (
+          scrollContainerRef.current.scrollTop === 0
+        ) {
+          scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight / 2 - 1;
+        }
+        scrollContainerRef.current.scrollTop += 2; // Adjust the scroll speed as needed
+      }
+    }, 30); // Adjust the interval as needed
+
+    return () => clearInterval(scrollInterval);
+  }, []);
 
   return (
     <>
@@ -79,28 +103,23 @@ export default function Courses() {
             marginTop: '2rem'
         }}/>
         <div
+          ref={scrollContainerRef}
           style={{
             maxHeight: '400px',
-            overflow: 'hidden',
-            mask: 'linear-gradient(transparent, white 10%, white 90%, transparent)',
+            overflow: 'scroll',
+            mask: 'linear-gradient(transparent, white 10%, white 90%, transparent)'
           }}
+          className='course'
         >
           <motion.div
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '1rem',
+              gap: '0.5rem',
               padding: '0 1rem',
               width: 'max-content',
             }}
-            animate={{ translateY: 'calc(-50% - 0.5rem)' }}
-            transition={{ duration: 1, ease: "linear", repeat: Infinity }}
           >
-            {courses.map((course) => {
-              return (
-                <CourseSmall course={course}/>
-              )
-            })}
             {courses.map((course) => {
               return (
                 <CourseSmall course={course}/>

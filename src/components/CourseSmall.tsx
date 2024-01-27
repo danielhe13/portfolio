@@ -17,6 +17,7 @@ export default function CourseSmall({ course }: Props) {
         borderRadius: 4,
         padding: '20px 35px',
         width: '450px',
+        boxShadow: '-3px 4px 4px 0px rgba(0, 0, 0, 0.10)'
       }}>
         <Typography variant='h5'>
           {course.name}
