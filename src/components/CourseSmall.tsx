@@ -2,7 +2,11 @@ import { Box, Typography } from '@mui/material';
 import React from 'react'
 
 interface Props {
-  course: string;
+  course: {
+    name: string;
+    code: string;
+    score: string;
+  };
 }
 
 export default function CourseSmall({ course }: Props) {
@@ -13,10 +17,9 @@ export default function CourseSmall({ course }: Props) {
         borderRadius: 4,
         padding: '20px 35px',
         width: '450px',
-        margin: 0.5,
       }}>
         <Typography variant='h5'>
-          {course}
+          {course.name}
         </Typography>
       </Box>
     </>

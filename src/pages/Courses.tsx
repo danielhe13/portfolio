@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react'
 import CourseSmall from '../components/CourseSmall';
+import { motion } from 'framer-motion';
 
 export default function Courses() {
 
@@ -77,11 +78,36 @@ export default function Courses() {
         <div style={{
             marginTop: '2rem'
         }}/>
-        {courses.map((course) => {
-          return (
-            <CourseSmall course={course.name}/>
-          )
-        })}
+        <div
+          style={{
+            maxHeight: '400px',
+            overflow: 'hidden',
+            mask: 'linear-gradient(transparent, white 10%, white 90%, transparent)',
+          }}
+        >
+          <motion.div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1rem',
+              padding: '0 1rem',
+              width: 'max-content',
+            }}
+            animate={{ translateY: 'calc(-50% - 0.5rem)' }}
+            transition={{ duration: 1, ease: "linear", repeat: Infinity }}
+          >
+            {courses.map((course) => {
+              return (
+                <CourseSmall course={course}/>
+              )
+            })}
+            {courses.map((course) => {
+              return (
+                <CourseSmall course={course}/>
+              )
+            })}
+          </motion.div>
+        </div>
       </div>
     </>
   );
