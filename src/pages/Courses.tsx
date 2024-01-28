@@ -58,24 +58,28 @@ export default function Courses() {
     },
   ];
 
-  courses.push(...courses);
+  courses.push(...courses, ...courses);
 
   const scrollContainerRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight / 3;
+    }
     const scrollInterval = setInterval(() => {
       if (scrollContainerRef.current) {
         if (
           scrollContainerRef.current.scrollTop >=
-          scrollContainerRef.current.scrollHeight / 2
+          scrollContainerRef.current.scrollHeight * 2 / 3
         ) {
-          scrollContainerRef.current.scrollTop = 0;
+          scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight / 3;
         } else if (
-          scrollContainerRef.current.scrollTop === 0
+          scrollContainerRef.current.scrollTop <=
+          scrollContainerRef.current.scrollHeight / 3
         ) {
-          scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight / 2 - 1;
+          scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight * 2 / 3;
         }
-        scrollContainerRef.current.scrollTop += 2; // Adjust the scroll speed as needed
+        scrollContainerRef.current.scrollTop += 1; // Adjust the scroll speed as needed
       }
     }, 30); // Adjust the interval as needed
 
@@ -118,6 +122,7 @@ export default function Courses() {
               gap: '0.5rem',
               padding: '0 1rem',
               width: 'max-content',
+              alignItems: 'center',
             }}
           >
             {courses.map((course) => {
