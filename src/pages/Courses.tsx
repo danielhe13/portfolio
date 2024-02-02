@@ -118,7 +118,7 @@ export default function Courses() {
           <motion.div
             style={{
               display: 'flex',
-              flexDirection: 'column',
+              flexDirection: 'column-reverse',
               gap: '0.5rem',
               padding: '0 1rem',
               width: 'max-content',
