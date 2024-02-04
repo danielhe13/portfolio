@@ -36,7 +36,7 @@ export default function AboutMe() {
         <div style={{
             marginTop: '2rem'
           }}/>
-        <BlackButton name='Resume' />
+        <BlackButton name='Resume' url='https://drive.google.com/file/d/1QUM9m3v9NWfoXQuH1msxlFM4r72Jq41l/view?usp=sharing' />
         <div style={{
             marginTop: '5rem'
           }}/>

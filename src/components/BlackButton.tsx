@@ -3,16 +3,17 @@ import React, { useEffect, useState } from 'react'
 
 interface Props {
   name: string;
+  url: string;
 }
 
-export default function BlackButton({ name }: Props) {
+export default function BlackButton({ name, url }: Props) {
   const buttonControls = useAnimation();
 
   const startAnimations = async () => {
     await buttonControls.start("active");
     setTimeout(() => {
       buttonControls.start("default");
-      window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+      window.open(url, '_blank');
     }, 100);
   }
 
