@@ -109,7 +109,7 @@ export default function Courses() {
         <div
           ref={scrollContainerRef}
           style={{
-            maxHeight: '400px',
+            maxHeight: '500px',
             overflow: 'scroll',
             mask: 'linear-gradient(transparent, white 10%, white 90%, transparent)'
           }}
