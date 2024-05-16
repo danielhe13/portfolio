@@ -56,6 +56,16 @@ export default function Courses() {
       code: 'COMP3231',
       score: '75 DN',
     },
+    {
+      name: 'Artificial Intelligence',
+      code: 'COMP3411',
+      score: '85 HD',
+    },
+    {
+      name: 'Modern Prog Problems with Rust',
+      code: 'COMP6991',
+      score: '90 HD',
+    },
   ];
 
   courses.push(...courses, ...courses);
