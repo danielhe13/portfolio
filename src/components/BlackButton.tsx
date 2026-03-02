@@ -28,7 +28,7 @@ export default function BlackButton({ name, url }: Props) {
           cursor: 'pointer',
         }}
         variants={{
-          default: { backgroundColor: 'red' },
+          default: { backgroundColor: 'black' },
           active: { backgroundColor: 'grey' },
         }}
         initial="default"

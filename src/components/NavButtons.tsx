@@ -19,7 +19,7 @@ export default function NavButtons({ name, route }: Props) {
           borderRadius: '15px',
           textTransform: 'none',
           padding: '13px 20px',
-          backgroundColor: location.pathname === route ? 'red' : hover ? 'rgba(0, 0, 0, 0.05)' : 'transparent',
+          backgroundColor: location.pathname === route ? 'black' : hover ? 'rgba(0, 0, 0, 0.05)' : 'transparent',
           // backgroundColor: location.pathname === route ? 'black' : hover ? 'rgba(0, 0, 0, 0.05)' : 'transparent',
           width: 'fit-content',
           cursor: 'pointer',
@@ -32,7 +32,7 @@ export default function NavButtons({ name, route }: Props) {
         onMouseLeave={() => setHover(false)}
       >
         <div style={{
-            color: location.pathname === route ? 'white' : 'red',
+            color: location.pathname === route ? 'white' : 'black',
             fontFamily: 'Arial',
             fontSize: '1.625rem',
             fontStyle: 'normal',

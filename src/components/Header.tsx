@@ -20,7 +20,7 @@ export default function Header() {
         display: 'flex',
         justifyContent: 'center',
         padding: '20px 20px',
-        border: 'red 1px solid',
+        border: '#E5E7EB 1px solid',
         borderRadius: '20px'
       }}>
         <div style={{
@@ -34,7 +34,6 @@ export default function Header() {
             sx={{
               cursor: 'pointer',
             }}
-            color='red'
             fontFamily='Arial'
             letterSpacing='3%'
           >
@@ -46,7 +45,7 @@ export default function Header() {
         display: 'flex',
         justifyContent: 'center',
         padding: '20px 20px',
-        border: 'red 1px solid',
+        border: '#E5E7EB 1px solid',
         height: '40px',
         borderRadius: '20px'
       }}>
@@ -58,17 +57,17 @@ export default function Header() {
           <a href="https://www.linkedin.com/in/danielh3/" target="_blank" rel="noopener noreferrer"><Linkedin style={{
             height: '40px',
             width: '40px',
-            fill: 'red',
+            fill: 'black',
           }}/></a>
           <a href="https://github.com/danielhe13" target="_blank" rel="noopener noreferrer"><GitHub style={{
             height: '40px',
             width: '40px',
-            fill: 'red',
+            fill: 'black',
           }}/></a>
           <a href="https://discord.com/users/212886873071288320" target="_blank" rel="noopener noreferrer"><Discord style={{
             height: '40px',
             width: '40px',
-            fill: 'red',
+            fill: 'black',
           }}/></a>
         </div>
       </div>

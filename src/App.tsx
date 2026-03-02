@@ -17,7 +17,7 @@ function App() {
     <Router>
       <Screen />
       <div style={{
-        backgroundImage: `url(${guide})`,
+        // backgroundImage: `url(${guide})`,
         backgroundSize: '100%',
       }}>
         <div style={{

@@ -25,7 +25,6 @@ export default function AboutMe() {
         <div style={{
           height: '102px',
           width: '100%',
-          backgroundColor: 'aqua'
         }}/>
         <div
           style={{
@@ -39,10 +38,9 @@ export default function AboutMe() {
           }}
         >
           <div style={{
-            height: '560px',
-            width: '560px',
-            backgroundColor: 'red',
-            // backgroundImage: `url(${Photo})`,
+            height: '450px',
+            width: '450px',
+            backgroundImage: `url(${Photo})`,
             backgroundSize: '100%',
             borderRadius: '30px',
           }}/>
@@ -55,13 +53,13 @@ export default function AboutMe() {
             }}
           >
             <Box>
-              <Typography variant="h1" color='red' fontFamily='Arial' letterSpacing='0.2%'>
+              <Typography variant="h1" fontFamily='Arial' letterSpacing='0.2%'>
                 Hi, I’m Daniel.
               </Typography>
               <div style={{
                 marginTop: '0.38rem'
               }}/>
-              <Typography variant="h4" color='red' fontFamily='Arial' letterSpacing='3%'>
+              <Typography variant="h4" fontFamily='Arial' letterSpacing='3%'>
                 I’m a <b>Computer Science Student</b>
               </Typography>
             </Box>
@@ -81,7 +79,6 @@ export default function AboutMe() {
         <div style={{
           height: '146px',
           width: '100%',
-          backgroundColor: 'aqua'
         }}/>
       </div>
     </>

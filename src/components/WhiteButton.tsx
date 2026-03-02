@@ -25,9 +25,10 @@ export default function WhiteButton({ name, url }: Props) {
           padding: '0.75rem 1.25rem',
           width: 'fit-content',
           cursor: 'pointer',
+          border: '#CBCBCB 1px solid',
         }}
         variants={{
-          default: { backgroundColor: 'red' },
+          default: { backgroundColor: 'white' },
           active: { backgroundColor: 'grey' },
         }}
         initial="default"

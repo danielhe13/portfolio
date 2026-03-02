@@ -12,8 +12,8 @@ export default function Navbar() {
       // width: '1052px',
       // maxWidth: '1052px',
       // justifyContent: 'space-evenly',
-      border: '1px solid red',
-      // border: '1px solid #e5e7eb',
+      // border: '1px solid red',
+      border: '1px solid #e5e7eb',
       // backgroundColor: 'rgba(255,255,255,0.6)',
       // backdropFilter: 'blur(8px)',
       position: 'fixed',
@@ -24,19 +24,19 @@ export default function Navbar() {
     }}>
       <NavButtons name='About Me' route="/aboutme"/>
       <div style={{
-        backgroundColor: 'red',
+        backgroundColor: '#E5E7EB',
         width: '2px',
         height: '34px',
       }}/>
       <NavButtons name='Courses' route="/courses"/>
       <div style={{
-        backgroundColor: 'red',
+        backgroundColor: '#E5E7EB',
         width: '2px',
         height: '34px',
       }}/>
       <NavButtons name='Experience' route="/experience"/>
       <div style={{
-        backgroundColor: 'red',
+        backgroundColor: '#E5E7EB',
         width: '2px',
         height: '34px',
       }}/>
