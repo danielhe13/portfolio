@@ -43,6 +43,7 @@ export default function AboutMe() {
             backgroundImage: `url(${Photo})`,
             backgroundSize: '100%',
             borderRadius: '30px',
+            backgroundRepeat: 'no-repeat'
           }}/>
           <div
             style={{
