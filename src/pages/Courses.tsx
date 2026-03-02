@@ -66,6 +66,31 @@ export default function Courses() {
       code: 'COMP6991',
       score: '90 HD',
     },
+    {
+      name: 'Computer Networks&Applications',
+      code: 'COMP3331',
+      score: '82 DN',
+    },
+    {
+      name: 'Human Computer Interaction',
+      code: 'COMP3511',
+      score: '79 DN',
+    },
+    {
+      name: 'Computer Science Project',
+      code: 'COMP3900',
+      score: '87 HD',
+    },
+    {
+      name: 'Extended Security Engineering',
+      code: 'COMP6841',
+      score: '73 CR',
+    },
+    {
+      name: 'Security Assessment',
+      code: 'COMP6447',
+      score: '77 DN',
+    },
   ];
 
   courses.push(...courses, ...courses);

@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "SSH FS - cse",
+			"uri": "ssh://cse/import/kamen/3/z5421214"
+		}
+	],
+	"settings": {}
+}

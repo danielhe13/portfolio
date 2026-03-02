@@ -10,26 +10,34 @@ import Screen from './pages/Screen';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 
+import guide from './image.png';
+
 function App() {
   return (
     <Router>
       <Screen />
       <div style={{
-        height: 'calc(100svh - 32px - 42px)',
-        width: 'calc(100svw - 32px - 32px)',
-        padding: '32px 32px 42px',
-        display: 'flex',
-        justifyContent: 'center',
+        backgroundImage: `url(${guide})`,
+        backgroundSize: '100%',
       }}>
-        <Header />
-        <Routes>
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/experience" element={<AboutMe />} />
-          <Route path="/projects" element={<AboutMe />} />
-          <Route path="/" element={<AboutMe />} />
-          <Route path="/aboutme" element={<AboutMe />} />
-        </Routes>
-        <Navbar />
+        <div style={{
+          height: 'calc(100svh - 24px - 42px)',
+          width: 'calc(100svw - 24px - 24px)',
+          padding: '24px 24px 42px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}>
+          <Header />
+          <Routes>
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/experience" element={<AboutMe />} />
+            <Route path="/projects" element={<AboutMe />} />
+            <Route path="/" element={<AboutMe />} />
+            <Route path="/aboutme" element={<AboutMe />} />
+          </Routes>
+          <Navbar />
+        </div>
       </div>
     </Router>
   );

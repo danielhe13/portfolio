@@ -6,14 +6,13 @@ interface Props {
   url: string;
 }
 
-export default function BlackButton({ name, url }: Props) {
+export default function WhiteButton({ name, url }: Props) {
   const buttonControls = useAnimation();
 
   const startAnimations = async () => {
     await buttonControls.start("active");
     setTimeout(() => {
       buttonControls.start("default");
-      window.open(url, '_blank');
     }, 100);
   }
 
@@ -37,7 +36,7 @@ export default function BlackButton({ name, url }: Props) {
         onClick={() => startAnimations()}
       >
         <div style={{
-            color: 'white',
+            color: 'black',
             fontFamily: 'Arial',
             fontSize: '1.5rem',
             fontStyle: 'normal',
