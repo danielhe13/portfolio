@@ -72,7 +72,7 @@ export default function AboutMe() {
               flexDirection: 'row',
               gap: '30px'
             }}>
-              <BlackButton name='Resume' url='https://drive.google.com/file/d/1w8nwxFIVb2HDNpNax5eYNIMFHMbFfrYR/view?usp=sharing' />
+              <BlackButton name='Resume' url='https://drive.google.com/file/d/1PwcIYNhV4RTYciigkusyi6XsRUqSHbzg/view?usp=sharing' />
               <WhiteButton name='Tell me more' url={window.location.href} />
             </div>
           </div>
